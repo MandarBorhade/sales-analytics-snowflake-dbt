@@ -3,7 +3,7 @@
 SET role_name = 'dbt_developer'; -- the one you have already created
 SET warehouse_name = 'load_wh';  -- the one you have already created
 SET database_name = 'sales';  -- the one you have already created
-SET schema_name = $database_name || '.' || 'dev_intermediate';  -- the one you have already created
+SET schema_name = $database_name || '.' || 'raw';  -- the one you have already created
 
 
 
