@@ -2,6 +2,9 @@ version: 2
 sources:
   - name: raw
     database: sales
-    schema: dev_intermediate
+    schema: raw
     tables:
       - name: customers
+      - name: products
+      - name: sales
+      - name: returns
