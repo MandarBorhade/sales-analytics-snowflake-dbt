@@ -1,0 +1,11 @@
+with cleaned_data as (
+    select 
+        {{ cast_int('PRODUCTCATEGORYKEY') }} as PRODUCTCATEGORYKEY,
+        {{ clean_string('CATEGORYNAME') }} as CATEGORYNAME
+    FROM {{ source('raw', 'AW_PRODUCT_CATEGORIES_LOOKUP') }}
+    WHERE PRODUCTCATEGORYKEY IS NOT NULL
+)
+
+SELECT PRODUCTCATEGORYKEY, CATEGORYNAME
+FROM cleaned_data
+ORDER BY PRODUCTCATEGORYKEY 

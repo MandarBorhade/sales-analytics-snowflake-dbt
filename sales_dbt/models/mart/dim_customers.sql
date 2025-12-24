@@ -1,0 +1,1 @@
+select * from {{source('intermediate','int_customers')}}

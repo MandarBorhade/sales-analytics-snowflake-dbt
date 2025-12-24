@@ -8,3 +8,24 @@ sources:
       - name: products
       - name: sales
       - name: returns
+      - name: territories
+      - name: AW_PRODUCT_CATEGORIES_LOOKUP
+      - name: product_subcategories
+      - name: AW_TERRITORY_LOOKUP
+      - name: AW_PRODUCT_SUBCATEGORIES_LOOKUP
+  - name: staging
+    database: sales
+    schema: staging
+    tables:
+      - name: stg_customers
+      - name: stg_products
+      - name: stg_returns
+      - name: stg_sales
+  - name: intermediate
+    database: sales
+    schema: intermediate
+    tables:
+      - name: int_customers
+      - name: int_returns
+      - name: int_sales
+  
